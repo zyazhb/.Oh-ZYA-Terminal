@@ -98,10 +98,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#------------------------------------------------------------------------
+
+# Try to attach exist session
 if test -z $TMUX ;then
 tmux attach-session
 fi
+# If no session is attached, start a new one
+if test -z $TMUX ;then
+tmux
+fi
+
+# Set up the env
 export PATH=$PATH:/usr/local/go/bin
+
+# Alias
 alias zup="apt update && apt upgrade -y && apt autoremove -y && apt autoclean"
 alias zngrok="/root/tools/ngrok tcp 4444 --region=jp"
 alias zhttpserver="python3 -m http.server 80"
