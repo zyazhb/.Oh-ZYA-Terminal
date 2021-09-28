@@ -110,7 +110,7 @@ tmux
 fi
 
 # Set up the env
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:/root/go/bin
 
 # Alias
 alias zup="apt update && apt upgrade -y && apt autoremove -y && apt autoclean"
@@ -122,3 +122,5 @@ alias zsocatlisten="~/tools/shell-manager/socat-shell-master/socat file:`tty`,ra
 alias zproxychainsconf="nano /usr/local/etc/proxychains.conf"
 alias zdns="python3 /root/ZYA/dns.py"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
