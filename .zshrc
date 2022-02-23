@@ -69,7 +69,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker golang)
+plugins=(ssh-agent git docker golang)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,13 +101,13 @@ source $ZSH/oh-my-zsh.sh
 #------------------------------------------------------------------------
 
 # Try to attach exist session
-if test -z $TMUX ;then
-tmux attach-session
-fi
+# if test -z $TMUX ;then
+# tmux attach-session
+# fi
 # If no session is attached, start a new one
-if test -z $TMUX ;then
-tmux
-fi
+# if test -z $TMUX ;then
+# tmux
+# fi
 
 # Set up the env
 export PATH=$PATH:/usr/local/go/bin:/root/go/bin
