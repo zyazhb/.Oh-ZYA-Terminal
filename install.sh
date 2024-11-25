@@ -8,3 +8,4 @@ ln -s -f $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s -f $(pwd)/.tmux.conf.local ~/.tmux.conf.local
 git clone --depth 1 https://github.com/junegunn/fzf.git fzf
 fzf/install
+eval "$(curl https://get.x-cmd.com)"
